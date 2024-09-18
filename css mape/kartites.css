@@ -1,9 +1,7 @@
 .flex-container {
-    align-content: center;
     display: flex;
     flex-direction: row;
     background-color: brown;
-
   }
 
   .flex-container > div {
@@ -11,5 +9,6 @@
     margin: 10px;
     padding: 12px;
     font-size: 2em;
+    align-content: center;
 
 }
