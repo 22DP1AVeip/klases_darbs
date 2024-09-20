@@ -1,14 +1,44 @@
 .flex-container {
-    display: flex;
-    flex-direction: row;
-    background-color: brown;
-  }
+  justify-content: center; 
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(25, 77, 5);
+  height: 500px;
+  width: 2000px;
+}
 
-  .flex-container > div {
-    background-color: aliceblue;
-    margin: 10px;
-    padding: 12px;
-    font-size: 2em;
-    align-content: center;
+.flex-container > div {
+  background-color: rgb(34, 212, 49);
+  margin: 10px;
+  padding: 12px;
+  font-size: 2em;
+  justify-content: center;
+  width: 250px;
+  height: 450px;
+  align-items: center;
+}
+
+.kartina {
+  align-items: center;
+  background-color: rgb(90, 170, 70);
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.kartina:hover {
+  transition: 0.5s;
+  transform: translate(-4px, 0);
+  box-shadow: 10px 10px 5px rgba(42, 235, 74, 0.3); 
+}
+
+.menu{
+  background-color: rgb(29, 211, 69);
+  padding: 10px;
+  text-align: center;
+}
+
+.button6{
 
 }
