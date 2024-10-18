@@ -77,28 +77,46 @@
 
 html, body {
   height: 100%;
-  margin: 5px;
+  margin: 10px;
 }
 
 body {
-  background: linear-gradient(rgb(117, 0, 0), rgb(7, 7, 136));
+  background: linear-gradient(135deg, rgba(117, 0, 0, 0.9), rgba(7, 7, 136, 0.9));
+  background-size: 400% 400%; 
+  animation: gradientShift 15s ease infinite; 
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white; 
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .kartina {
-  display: flex; /* Use flexbox for better alignment */
-  flex-direction: column; /* Align children vertically */
-  align-items: center; /* Center align items */
-  justify-content: space-between; /* Space items evenly */
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
   background: linear-gradient(white, black);
-  width: 250px; /* Consistent width for all cards */
-  height: 450px; /* Consistent height for all cards */
+  width: 250px; 
+  height: 450px; 
   margin: 8px;
   padding: 12px;
   border-radius: 15px;
   outline: 3px solid black;
   cursor: pointer;
-  transition: box-shadow 0.3s ease; /* Add transition for hover effects */
+  transition: box-shadow 0.3s ease; 
   position: relative;
+  opacity: 0.7;
 }
 
 .kartina:hover {
@@ -124,10 +142,10 @@ body {
 
 @keyframes fadeOpacity {
   0% {
-      opacity: 1;
+      opacity: 0.7;
   }
   100% {
-      opacity: 0.7;
+      opacity: 1;
   }
 }
 
@@ -265,6 +283,11 @@ body {
       margin-right: 0;
   }
 
+  .dropdown-content {
+      position: relative;
+      min-width: 100%; 
+  }
+
   .search-bar {
       width: 100%;
       margin-bottom: 10px;
@@ -283,4 +306,21 @@ body {
   body {
       margin: 0;
   }
+}
+
+#section1, #section2, #section3 {
+  padding: 20px;
+  background-color: rgba(182, 77, 86, 0.8);
+  border: 2px solid #000;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+#section1:hover, #section2:hover, #section3:hover {
+  background-color: rgba(182, 77, 86, 0.9);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
 }
